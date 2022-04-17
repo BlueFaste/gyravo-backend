@@ -2,6 +2,7 @@ import express from "express";
 import * as http from "http";
 import courses from "./router/courses.js";
 import members from "./router/members.js";
+import news from "./router/news.js";
 
 const app = express();
 const server = http.createServer(app);
@@ -14,6 +15,7 @@ app.get('/', function(req, res) {
 
 app.use('/courses', courses);
 app.use('/members', members);
+app.use('/news', news);
     
 
 server.listen(8080, () => {
