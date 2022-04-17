@@ -1,5 +1,6 @@
 import express from "express";
 import * as http from "http";
+import admin from "./router/admin/admin.js";
 import courses from "./router/courses.js";
 import members from "./router/members.js";
 import news from "./router/news.js";
@@ -13,6 +14,7 @@ app.get('/', function(req, res) {
   res.send('Home page');
 });
 
+app.use('/admin', admin);
 app.use('/courses', courses);
 app.use('/members', members);
 app.use('/news', news);
