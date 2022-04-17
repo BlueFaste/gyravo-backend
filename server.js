@@ -1,21 +1,17 @@
 import express from "express";
 import * as http from "http";
-import test from "./router/test.js";
+import courses from "./router/courses.js";
 
 const app = express();
 const server = http.createServer(app);
 
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', function(req, res) {
-  res.send('hello world');
+  //TODO: page d'accueil
+  res.send('Home page');
 });
 
-app.route('/courses')
-    .get(function(req,res){
-        res.send('courses')
-    })
-
-app.use('/test', test);
+app.use('/courses', courses);
     
 
 server.listen(8080, () => {
