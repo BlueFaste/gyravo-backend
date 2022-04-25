@@ -7,13 +7,13 @@ router.use(function timeLog(req, res, next) {
   console.log('Time: ', Date.now());
   next();
 });
-// define the home page route
+
 router.get('/', function(req, res) {
-  res.send('Birds home page');
+  res.send('Listing s of courses page');
 });
-// define the about route
-router.get('/about', function(req, res) {
-  res.send('About birds');
+
+router.get('/:courseName', function(req, res) {
+  res.send('A page of a course: ' + req.params.courseName);
 });
 
 export default router; 
