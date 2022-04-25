@@ -4,6 +4,9 @@ import admin from "./router/admin/admin.js";
 import courses from "./router/courses.js";
 import members from "./router/members.js";
 import news from "./router/news.js";
+import login from './router/login.js';
+import logout from './router/logout.js';
+import signin from './router/signin.js';
 
 const app = express();
 const server = http.createServer(app);
@@ -18,6 +21,9 @@ app.use('/admin', admin);
 app.use('/courses', courses);
 app.use('/members', members);
 app.use('/news', news);
+app.use('/login', login)
+app.use('/logout', logout)
+app.use('/signin', signin)
     
 
 server.listen(8080, () => {
