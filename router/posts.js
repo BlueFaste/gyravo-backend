@@ -3,11 +3,11 @@ import express from "express";
 const router = express.Router();
 
 router.get('/', function(req, res) {
-  res.send('Listing s news page');
+  res.send('Listing s posts page');
 });
 
-router.get('/:idNews', function(req, res) {
-  res.send('A page of a news: ' + req.params.idNews);
+router.get('/:idPost', function(req, res) {
+  res.send('A page of a posts: ' + req.params.idNews);
 });
 
 export default router; 

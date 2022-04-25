@@ -3,7 +3,7 @@ const router = express.Router();
 
 import courses from "./courses.js";
 import members from "./members.js";
-import news from "./news.js";
+import posts from "./posts.js";
 
 router.use(function timeLog(req, res, next) {
     console.log('Check if admin');
@@ -17,6 +17,6 @@ router.get('/', function(req, res) {
 
 router.use('/courses', courses);
 router.use('/members', members);
-router.use('/news', news);
+router.use('/news', posts);
     
 export default router; 

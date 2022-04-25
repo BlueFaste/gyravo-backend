@@ -3,7 +3,7 @@ import * as http from "http";
 import admin from "./router/admin/admin.js";
 import courses from "./router/courses.js";
 import members from "./router/members.js";
-import news from "./router/news.js";
+import posts from "./router/posts.js";
 import login from './router/auth/login.js';
 import logout from './router/auth/logout.js';
 import register from './router/auth/register.js';
@@ -23,7 +23,7 @@ app.get('/', function(req, res) {
 app.use('/admin', admin);
 app.use('/courses', courses);
 app.use('/members', members);
-app.use('/news', news);
+app.use('/news', posts);
 app.use('/login', login)
 app.use('/logout', logout)
 app.use('/register', register)
