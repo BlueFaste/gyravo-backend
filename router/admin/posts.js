@@ -1,26 +1,17 @@
 
 import express from "express";
+import postController from "../../controllers/postController.js";
 const router = express.Router();
 
-router.get('/', function(req, res) {
-  res.send('Admin : Listing s posts page');
-});
+router.get('/', postController.get)
 
-router.get('/:idPost', function(req, res) {
-  res.send('Admin : A page of a posts: ' + req.params.idNews);
-});
+router.get('/:idPost', postController.getOne)
 
-router.post('/', function(req, res){
-  res.send('Admin : Add a posts')
-})
+router.post('/', postController.create)
 
-router.put('/:idPost', function(req, res){
-  res.send('Admin : Update a posts')
-})
+router.put('/:idPost', postController.update)
 
-router.delete('/:idPost', function(req, res){
-  res.send('Admin : Delete the course : ' + req.params.idNews)
-})
+router.delete('/:idPost', postController.deleteOne)
 
 export default router; 
 

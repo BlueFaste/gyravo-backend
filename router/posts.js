@@ -1,14 +1,11 @@
 
 import express from "express";
+import postController from "../controllers/postController.js";
 const router = express.Router();
 
-router.get('/', function(req, res) {
-  res.send('Listing s posts page');
-});
+router.get('/', postController.get)
 
-router.get('/:idPost', function(req, res) {
-  res.send('A page of a posts: ' + req.params.idNews);
-});
+router.get('/:idPost', postController.getOne)
 
 export default router; 
 
