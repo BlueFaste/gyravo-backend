@@ -1,10 +1,9 @@
 
 import express from "express";
+import memberController from "../controllers/memberController.js";
 const router = express.Router();
 
-router.get('/', function(req, res) {
-  res.send('Listing s of office members page');
-});
+router.get('/', memberController.get);
 
 export default router; 
 
