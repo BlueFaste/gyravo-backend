@@ -7,6 +7,7 @@ import posts from "./router/posts.js";
 import login from './router/auth/login.js';
 import logout from './router/auth/logout.js';
 import register from './router/auth/register.js';
+import profiles from './router/licencees/profiles.js';
 
 
 const app = express();
@@ -27,6 +28,7 @@ app.use('/news', posts);
 app.use('/login', login)
 app.use('/logout', logout)
 app.use('/register', register)
+app.use('/profiles', profiles)
     
 
 server.listen(8080, () => {
