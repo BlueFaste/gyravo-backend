@@ -8,22 +8,22 @@ router.use(function timeLog(req, res, next) {
   next();
 });
 router.get('/', function(req, res) {
-  res.send('Listing s of courses page');
+  res.send('Admin : Listing s of courses page');
 });
 router.get('/:idCourse', function(req, res) {
-  res.send('A page of a course: ' + req.params.idCourse);
+  res.send('Admin : A page of a course: ' + req.params.idCourse);
 });
 
 router.post('/', function(req, res){
-  res.send('Add a post')
+  res.send('Admin : Add a post')
 })
 
 router.put('/:idCourse', function(req, res){
-  res.send('Update a post')
+  res.send('Admin : Update a post')
 })
 
 router.delete('/:idCourse', function(req, res){
-  res.send('Delete the course : ' + req.params.idCourse)
+  res.send('Admin : Delete the course : ' + req.params.idCourse)
 })
 
 export default router; 
