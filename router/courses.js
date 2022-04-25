@@ -1,5 +1,6 @@
 
 import express from "express";
+import courseController from "../controllers/courseController.js";
 const router = express.Router();
 
 // middleware that is specific to this router
@@ -8,13 +9,8 @@ router.use(function timeLog(req, res, next) {
   next();
 });
 
-router.get('/', function(req, res) {
-  res.send('Listing s of courses page');
-});
-
-router.get('/:courseName', function(req, res) {
-  res.send('A page of a course: ' + req.params.courseName);
-});
+router.get('/', courseController.get);
+router.get('/:idCourse', courseController.getOne);
 
 export default router; 
 
