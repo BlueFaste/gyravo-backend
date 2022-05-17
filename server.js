@@ -8,6 +8,8 @@ import login from './router/auth/login.js';
 import logout from './router/auth/logout.js';
 import register from './router/auth/register.js';
 import profiles from './router/licencees/profiles.js';
+import db from "./db/connection.js";
+import m from "moment";
 
 
 const app = express();
@@ -29,6 +31,15 @@ app.use('/login', login)
 app.use('/logout', logout)
 app.use('/register', register)
 app.use('/profiles', profiles)
+
+app.get('/test/db', function(req, res) {
+  const value = `test ${m().format()}`
+  db.query("INSERT INTO gyravo.Tags (tag_title) VALUES ('test3')")
+    .then((rows) => {
+      console.log(rows); //[ {val: 1}, meta: ... ]
+      res.send(true)
+    })
+})
     
 
 server.listen(8080, () => {
