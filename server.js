@@ -17,9 +17,7 @@ const server = http.createServer(app);
 app.use(express.json());
 app.use(express.urlencoded())
 
-// respond with "hello world" when a GET request is made to the homepage
 app.get('/', function(req, res) {
-  //TODO: page d'accueil
   res.send('Home page');
 });
 
