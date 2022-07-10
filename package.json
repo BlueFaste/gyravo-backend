@@ -20,7 +20,10 @@
   },
   "homepage": "https://github.com/BlueFaste/gyravo-backend#readme",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "mariadb": "^3.0.0",
+    "moment": "^2.29.3",
     "nodemon": "^2.0.15"
   }
 }
